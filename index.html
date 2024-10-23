@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kanban</title>
+  </head>
+  <body>
+    <div class="modal fade" id="todo_form" tabindex="-1" aria-labelledby="todoModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="todoModalLabel">Agregar tarea</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="text" id="todo_input" class="form-control mb-2" />
+            <button class="btn btn-success btn-block" id="todo_submit">Agregar tarea</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5 ">
+      <div class="row mx-auto"> 
+        <div class="col-md status border shadow mb-3 me-3" id="no_status">
+          <h2 class="">No iniciado</h2>
+          <button id="add_btn" class="btn w-100 btn-agregar " data-bs-toggle="modal" data-bs-target="#todo_form">
+            + Agregar
+          </button>
+        </div>
+        <div class="col-md border shadow status  mb-3 me-3">
+          <h2>En progreso</h2>
+        </div>
+        <div class="col-md border shadow status mb-3 me-3">
+          <h2>Completado</h2>
+        </div>
+        <div class="col-md border shadow status mb-3 me-3">
+          <h2>Cancelado</h2>
+        </div>
+        <div class="col-md border shadow status mb-3 me-3">
+          <h2>En espera</h2>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay" class="d-none"></div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
